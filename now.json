@@ -4,5 +4,6 @@
     "name": "abschaffen.jetzt",
     "builds": [
         { "src": "*.js", "use": "@now/node" }
-    ]
+    ],
+    "alias": ["abschaffen"]
 }
