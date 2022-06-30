@@ -1,12 +1,14 @@
 import Cat from '../public/cat.svg'
 import Head from 'next/head'
 
+const punycode = require('punycode')
+
 import "@fontsource/balsamiq-sans"
 
 export async function getServerSideProps(context) {
   return {
     props: {
-      reason: decodeURIComponent(context.req.headers.host).replace('.abschaffen.jetzt', '').toUpperCase().replace('.', ' ').replace('_', ' '),
+      reason: punycode.toUnicode(context.req.headers.host).replace('.abschaffen.jetzt', '').toUpperCase().replace('.', ' ').replace('_', ' '),
       full: decodeURIComponent(context.req.headers.host).replace('.abschaffen.jetzt', '').toUpperCase().replace('.', ' ').replace('_', ' ') + ' ABSCHAFFEN! JETZT!',
       host: context.req.headers.host
     }
@@ -14,12 +16,12 @@ export async function getServerSideProps(context) {
 }
 
 export default function Home({ full, host }) {
-
   if (host === 'abschaffen.jetzt' || host === 'localhost:3000') { 
     full = <input style={{ width: '100%' }} onKeyDown={(e) => { 
       if (e.key === 'Enter') { 
         try {
-        location.href = 'https://' + encodeURIComponent(e.target.value.trim().replace(' ', '_')) + '.abschaffen.jetzt'
+          let prefix = encodeURIComponent(e.target.value.trim().replace(' ', '_'))
+          location.href = 'https://' + prefix + (prefix ? '.' : '') + 'abschaffen.jetzt'
         } catch (e) {
           alert('URL nicht möglich')
         }
