@@ -6,8 +6,8 @@ import "@fontsource/balsamiq-sans"
 export async function getServerSideProps(context) {
   return {
     props: {
-      reason: context.req.headers.host.replace('.abschaffen.jetzt', '').toUpperCase().replace('.', ' '),
-      full: context.req.headers.host.replace('.abschaffen.jetzt', '').toUpperCase().replace('.', ' ') + ' ABSCHAFFEN! JETZT!',
+      reason: decodeURIComponent(context.req.headers.host).replace('.abschaffen.jetzt', '').toUpperCase().replace('.', ' ').replace('_', ' '),
+      full: decodeURIComponent(context.req.headers.host).replace('.abschaffen.jetzt', '').toUpperCase().replace('.', ' ').replace('_', ' ') + ' ABSCHAFFEN! JETZT!',
       host: context.req.headers.host
     }
   }
@@ -15,10 +15,14 @@ export async function getServerSideProps(context) {
 
 export default function Home({ full, host }) {
 
-  if (host === 'abschaffen.jetzt') { 
+  if (host === 'abschaffen.jetzt' || host === 'localhost:3000') { 
     full = <input style={{ width: '100%' }} onKeyDown={(e) => { 
       if (e.key === 'Enter') { 
-        location.href = 'https://' + e.target.value + '.abschaffen.jetzt'
+        try {
+        location.href = 'https://' + encodeURIComponent(e.target.value.trim().replace(' ', '_')) + '.abschaffen.jetzt'
+        } catch (e) {
+          alert('URL nicht möglich')
+        }
       } 
     }}/>
   }
