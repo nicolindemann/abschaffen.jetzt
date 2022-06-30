@@ -16,15 +16,21 @@ export async function getServerSideProps(context) {
 }
 
 export default function Home({ full, host }) {
+  const redirect = (e) => {
+    if (e.target.value !== '') { 
+      try {
+        let prefix = encodeURIComponent(e.target.value.trim().replace(' ', '_'))
+        location.href = 'https://' + prefix + (prefix ? '.' : '') + 'abschaffen.jetzt'
+      } catch (e) {
+        alert('URL nicht möglich')
+      }
+    } 
+  }
+
   if (host === 'abschaffen.jetzt' || host === 'localhost:3000') { 
-    full = <input style={{ width: '100%' }} onKeyDown={(e) => { 
+    full = <input autofocus="autofocus" name="host" style={{ width: '100%' }} onBlur={redirect} onKeyDown={(e) => { 
       if (e.key === 'Enter') { 
-        try {
-          let prefix = encodeURIComponent(e.target.value.trim().replace(' ', '_'))
-          location.href = 'https://' + prefix + (prefix ? '.' : '') + 'abschaffen.jetzt'
-        } catch (e) {
-          alert('URL nicht möglich')
-        }
+        redirect(e)
       } 
     }}/>
   }
