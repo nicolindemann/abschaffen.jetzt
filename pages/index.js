@@ -9,7 +9,7 @@ export async function getServerSideProps(context) {
   return {
     props: {
       reason: punycode.toUnicode(context.req.headers.host).replace('.abschaffen.jetzt', '').toUpperCase().replace('.', ' ').replace('_', ' '),
-      full: decodeURIComponent(context.req.headers.host).replace('.abschaffen.jetzt', '').toUpperCase().replace('.', ' ').replace('_', ' ') + ' ABSCHAFFEN! JETZT!',
+      full: punycode.toUnicode(context.req.headers.host).replace('.abschaffen.jetzt', '').toUpperCase().replace('.', ' ').replace('_', ' ') + ' ABSCHAFFEN! JETZT!',
       host: context.req.headers.host
     }
   }
