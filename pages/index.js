@@ -16,7 +16,11 @@ export async function getServerSideProps(context) {
 export default function Home({ full, host }) {
 
   if (host === 'abschaffen.jetzt') { 
-    full = '<input></input>'
+    full = <input style={{ width: '100%' }} onKeyDown={(e) => { 
+      if (e.key === 'Enter') { 
+        location.href = 'https://' + e.target.value + '.abschaffen.jetzt'
+      } 
+    }}/>
   }
 
   return (
