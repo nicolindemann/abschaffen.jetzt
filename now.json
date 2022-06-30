@@ -1,9 +1,0 @@
-{
-    "version": 2,
-    "scope": "nicolindemann",
-    "name": "abschaffen.jetzt",
-    "builds": [
-        { "src": "*.js", "use": "@now/node" }
-    ],
-    "alias": ["abschaffen"]
-}

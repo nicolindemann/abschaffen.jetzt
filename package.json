@@ -1,23 +1,31 @@
 {
   "name": "abschaffen.jetzt",
   "version": "1.0.0",
-  "description": "abschaffen.jetzt",
-  "main": "index.js",
+  "private": true,
   "scripts": {
-    "start": "micro -l tcp://0.0.0.0:$PORT",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "next dev",
+    "build": "next build",
+    "prebuild": "real-favicon generate faviconDescription.json faviconData.json public/ && rimraf public/site.webmanifest",
+    "start": "next start",
+    "lint": "next lint"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/nicolindemann/abschaffen.jetzt.git"
-  },
-  "author": "",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/nicolindemann/abschaffen.jetzt/issues"
-  },
-  "homepage": "https://github.com/nicolindemann/abschaffen.jetzt#readme",
   "dependencies": {
-    "micro": "^9.3.4"
+    "@fontsource/balsamiq-sans": "^4.5.7",
+    "next": "12.2.0",
+    "next-seo": "^5.4.0",
+    "punycode": "^2.1.1",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "webpack": "^5.73.0"
+  },
+  "devDependencies": {
+    "@svgr/webpack": "^6.2.1",
+    "cli-real-favicon": "^0.0.8",
+    "eslint": "8.18.0",
+    "eslint-config-next": "12.2.0",
+    "rimraf": "^3.0.2"
+  },
+  "eslintConfig": {
+    "extends": "next"
   }
 }
