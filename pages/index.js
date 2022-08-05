@@ -28,7 +28,7 @@ export default function Home({ full, host }) {
   }
 
   if (host === 'abschaffen.jetzt' || host === 'localhost:3000') { 
-    full = <input autofocus="autofocus" name="host" style={{ width: '100%' }} onBlur={redirect} onKeyDown={(e) => { 
+    full = <input autoFocus="autofocus" name="host" style={{ width: '100%' }} onBlur={redirect} onKeyDown={(e) => { 
       if (e.key === 'Enter') { 
         redirect(e)
       } 
