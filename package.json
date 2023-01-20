@@ -13,7 +13,7 @@
     "@fontsource/balsamiq-sans": "^4.5.9",
     "next": "13.1.2",
     "next-seo": "^5.15.0",
-    "punycode": "^2.2.0",
+    "punycode": "^2.3.0",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "webpack": "^5.75.0"
