@@ -11,7 +11,7 @@
   },
   "dependencies": {
     "@fontsource/balsamiq-sans": "^4.5.9",
-    "next": "13.2.3",
+    "next": "13.2.4",
     "next-seo": "^5.15.0",
     "punycode": "^2.3.0",
     "react": "18.2.0",
