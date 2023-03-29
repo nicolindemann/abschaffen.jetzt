@@ -21,7 +21,7 @@
   "devDependencies": {
     "@svgr/webpack": "^7.0.0",
     "cli-real-favicon": "^0.0.8",
-    "eslint": "8.36.0",
+    "eslint": "8.37.0",
     "eslint-config-next": "13.2.4",
     "rimraf": "^4.4.1"
   },
