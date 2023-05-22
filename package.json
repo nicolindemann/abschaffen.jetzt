@@ -22,7 +22,7 @@
     "@svgr/webpack": "^8.0.1",
     "cli-real-favicon": "^0.0.8",
     "eslint": "8.40.0",
-    "eslint-config-next": "13.4.2",
+    "eslint-config-next": "13.4.3",
     "rimraf": "^5.0.1"
   },
   "eslintConfig": {
