@@ -16,7 +16,7 @@
     "punycode": "^2.3.0",
     "react": "18.2.0",
     "react-dom": "18.2.0",
-    "webpack": "^5.83.1"
+    "webpack": "^5.84.0"
   },
   "devDependencies": {
     "@svgr/webpack": "^8.0.1",
