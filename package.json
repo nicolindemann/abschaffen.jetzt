@@ -10,7 +10,7 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@fontsource/balsamiq-sans": "^5.0.5",
+    "@fontsource/balsamiq-sans": "^5.0.6",
     "next": "13.4.12",
     "next-seo": "^6.1.0",
     "punycode": "^2.3.0",
