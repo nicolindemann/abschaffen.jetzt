@@ -19,7 +19,7 @@
     "webpack": "^5.88.2"
   },
   "devDependencies": {
-    "@svgr/webpack": "^8.0.1",
+    "@svgr/webpack": "^8.1.0",
     "cli-real-favicon": "^0.0.8",
     "eslint": "8.46.0",
     "eslint-config-next": "13.4.18",
