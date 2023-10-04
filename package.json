@@ -23,7 +23,7 @@
     "cli-real-favicon": "^0.0.8",
     "eslint": "8.50.0",
     "eslint-config-next": "13.5.4",
-    "rimraf": "^5.0.1"
+    "rimraf": "^5.0.5"
   },
   "eslintConfig": {
     "extends": "next"
