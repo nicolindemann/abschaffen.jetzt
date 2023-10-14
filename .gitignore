@@ -37,3 +37,5 @@ public/*
 !public/icon.png
 faviconData.json
 old/
+
+.idea
