@@ -10,7 +10,7 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@fontsource/balsamiq-sans": "^5.0.15",
+    "@fontsource/balsamiq-sans": "^5.0.16",
     "@vercel/analytics": "^1.1.1",
     "next": "13.5.4",
     "next-seo": "^6.1.0",
