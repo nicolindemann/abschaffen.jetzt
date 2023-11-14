@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "prebuild": "real-favicon generate faviconDescription.json faviconData.json public/ && rimraf public/site.webmanifest",
+    "prebuild": "npx cli-real-favicon generate faviconDescription.json faviconData.json public/ && rimraf public/site.webmanifest",
     "start": "next start",
     "lint": "next lint"
   },
@@ -20,7 +20,6 @@
   },
   "devDependencies": {
     "@svgr/webpack": "^8.1.0",
-    "cli-real-favicon": "^0.0.8",
     "eslint": "8.53.0",
     "eslint-config-next": "^14.0.2",
     "rimraf": "^5.0.5"
