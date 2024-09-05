@@ -22,7 +22,7 @@
   "devDependencies": {
     "@svgr/webpack": "^8.1.0",
     "eslint": "8.57.0",
-    "eslint-config-next": "^14.2.6",
+    "eslint-config-next": "^14.2.8",
     "rimraf": "^5.0.7"
   },
   "eslintConfig": {
